@@ -1,0 +1,79 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* custom css */
+
+.card-header {
+  background: #f1f1f1;
+}
+
+.like-button{
+  border: none;
+}
+.like-button.Mui-selected{
+  color:red !important;
+  background: none;
+}
+.comment-box {
+  margin: 0 0 0 2.5vw;
+}
+
+.sidebar-footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.profile-sidebar {
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  background: #fff;  
+}
+
+.buy-btn {
+  color: black;
+  background: #faaf00;
+  border-color: #FF8F00;
+}
+
+.rating-container {
+  display: inline-flex;
+  align-items: stretch;
+}
+
+.rating-container p {
+  display: inline-block;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  .stacking-container {
+    display: grid;
+  }
+}
+
